@@ -93,16 +93,6 @@ namespace ImageProcessor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] CloseRed {
-            get {
-                object obj = ResourceManager.GetObject("CloseRed", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
         internal static byte[] Developer {
             get {
                 object obj = ResourceManager.GetObject("Developer", resourceCulture);
