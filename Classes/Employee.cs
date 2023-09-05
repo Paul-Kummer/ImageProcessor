@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ImageProcessor.Classes
 {
-    class Employee
+    public class Employee
     {
         public Employee()
         {
 
         }
 
-        String _firstName;
-        String _lastName;
-        String _id;
+        private String _firstName;
+        private String _lastName;
+        private String _id;
 
         public String FirstName
         {

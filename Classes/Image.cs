@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace ImageProcessor.Classes
 {
-    class Image
+    public class Image
     {
         public Image()
         {
 
         }
 
-        System.IO.FileInfo _imageInfo;
-        String _originalNameWithExt;
-        String _currentNameWithExt;
-        String _newNameWithExt;
-        String _originalPathNoFile;
-        String _currentPathNoFile;
-        String _newpathNoFile;
+        private System.IO.FileInfo _imageInfo;
+        private String _originalNameWithExt;
+        private String _currentNameWithExt;
+        private String _newNameWithExt;
+        private String _originalPathNoFile;
+        private String _currentPathNoFile;
+        private String _newpathNoFile;
 
         public System.IO.FileInfo ImageInfo 
         {

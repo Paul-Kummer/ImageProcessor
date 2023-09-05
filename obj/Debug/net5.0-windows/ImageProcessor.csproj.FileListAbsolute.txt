@@ -20,5 +20,9 @@ C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\ImageProcess
 C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\ref\ImageProcessor.dll
 C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\ImageProcessor.pdb
 C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\ImageProcessor.genruntimeconfig.cache
-C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\UserControls\Cavity.g.cs
-C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\UserControls\Cavity.baml
+C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\ImageProcessor.Properties.Resources.resources
+C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\ImageProcessor.csproj.GenerateResource.cache
+C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\UserControls\CavityUC.g.cs
+C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\UserControls\TrayUC.g.cs
+C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\UserControls\CavityUC.baml
+C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\UserControls\TrayUC.baml

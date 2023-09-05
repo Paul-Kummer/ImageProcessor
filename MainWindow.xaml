@@ -10,27 +10,232 @@
         Title="Image Processor" 
         Height="920" MinHeight="600"
         Width="1800" MinWidth="800">
-    <Grid>
+    <Window.Resources>
+        <Style x:Name="ImageStyle" TargetType="Image">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Canvas.Top" Value="50"/>
+            <Setter Property="Canvas.Left" Value="50"/>
+            <Setter Property="Width" Value="45"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Stretch" Value="Fill"/>
+        </Style>
+        <Style x:Name="MenuStyle" TargetType="Menu">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Width" Value="auto"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            
+            <Style.Resources>
+                <Style x:Name="MenuStackStyle" TargetType="StackPanel">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="VerticalAlignment" Value="Stretch"/>
+                    <Setter Property="Orientation" Value="Horizontal"/>
+                    <Setter Property="Height" Value="50"/>
+                    <Setter Property="Width" Value="225"/>
+                    <Setter Property="Background" Value="gray"/>
+                    <Setter Property="Margin" Value="-8,0,-8,0"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#FF4C8F4C" Opacity="0.7"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+
+                    <Style.Resources>
+                        <Style TargetType="Image">
+
+                        </Style>
+                        <Style x:Name="MenuTextStyle" TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="20"/>
+                            <Setter Property="FontWeight" Value="DemiBold"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                            <Setter Property="Width" Value="150"/>
+                            <Setter Property="Margin" Value="10,0,0,0"/>
+                            <Setter Property="Height" Value="auto"/>
+                        </Style>
+                        <Style TargetType="Rectangle">
+                            <Setter Property="Width" Value="1"/>
+                            <Setter Property="Height" Value="40"/>
+                            <Setter Property="Fill" Value="Black"/>
+                        </Style>
+                    </Style.Resources>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="DarkGray" Margin="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="75*"/>
         </Grid.ColumnDefinitions>
 
-        <Menu>
-            <MenuItem Width="100" Height="25" Header="File" StaysOpenOnClick="True">
-                <MenuItem Header="Settings" Width="200" Height="25" Icon="Images/Settings.png"/>
-            </MenuItem>
-            <MenuItem Width="100" Height="25" Header="Help">
-                <Button Content="Help"/>
-            </MenuItem>
-        </Menu>
-        
-        <StatusBar Grid.Row="2">
-            <StatusBarItem>
+        <Border Grid.Column="0" Grid.ColumnSpan="2" BorderThickness="1" BorderBrush="Black" Background="gray" HorizontalAlignment="Stretch" Margin="0" Padding="0">
+            <Menu x:Name="MainMenu" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Padding="0">
+                <StackPanel >
+                    <Rectangle Margin="0,0,10,0"/>
+                    <Image Source="/Images/SkipBack.png"/>
+                    <TextBlock Text="Skip Back"/>
+                    <Rectangle/>
+                </StackPanel>
+                <StackPanel >
+                    <Image Source="/Images/SkipForward.png"/>
+                    <TextBlock Text="Skip Forward"/>
+                    <Rectangle/>
+                </StackPanel>
+                <StackPanel >
+                    <Image Source="/Images/Refresh2.png"/>
+                    <TextBlock Text="Refresh"/>
+                    <Rectangle/>
+                </StackPanel>
+                <StackPanel >
+                    <Image Source="/Images/Developer.png"/>
+                    <TextBlock Text="Developer"/>
+                    <Rectangle/>
+                </StackPanel>
+                <StackPanel >
+                    <Image Source="/Images/Trash2.png"/>
+                    <TextBlock Text="Delete"/>
+                    <Rectangle/>
+                </StackPanel>
+                <StackPanel >
+                    <Image Source="/Images/Settings.png"/>
+                    <TextBlock Text="Settings"/>
+                    <Rectangle/>
+                </StackPanel>
+                <StackPanel >
+                    <Image Source="/Images/Help.png"/>
+                    <TextBlock Text="Help"/>
+                    <Rectangle/>
+                </StackPanel>
+            </Menu>
+        </Border>
+
+        <Grid Grid.Row="1" Grid.Column="0" Background="#FF404044">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                
+            </Grid.ColumnDefinitions>
+                
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="auto" Background="gray">
+                <Label Content="User Inputs" FontSize="15" FontWeight="DemiBold" Foreground="White" Background="#FF303030" Width="250" HorizontalContentAlignment="Center"/>
+                <StackPanel x:Name="JobID_Stack" Orientation="Horizontal">
+                    <Label Content="Job ID" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="JobID_TextBox" Width="150"/>
+                </StackPanel>
+                <StackPanel x:Name="PartID_Stack" Orientation="Horizontal">
+                    <Label Content="Part ID" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="PartID_TextBox" Width="150"/>
+                </StackPanel>
+                <StackPanel x:Name="TrayNum_Stack" Orientation="Horizontal">
+                    <Label Content="Tray Number" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="TrayNum_TextBox" Width="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black"
+                             Text="{Binding Path=TrayNumberStr, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <StackPanel Orientation="Vertical">
+                        <Button x:Name="TrayNumIncrement_Button" Height="15" Width="20" 
+                                Command="{Binding Path=IncrementCommand}">
+                            <TextBlock Foreground="Black" VerticalAlignment="Center" Width="auto" Text="+" FontSize="12"/>
+                        </Button>
+                        <Button x:Name="TrayNumDecrement_Button" Height="15" Width="20"
+                                Command="{Binding Path=DecrementCommand}">
+                            <TextBlock Foreground="Black" VerticalAlignment="Center" Width="auto" Text="-" FontSize="12"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="Subfolder_Stack" Orientation="Horizontal">
+                    <Label Content="Source Subfolder" Width="100" HorizontalContentAlignment="Right"/>
+                    <ComboBox x:Name="SubFolder_ComboBox" Width="150"
+                              />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel x:Name="ImageInfo_Stack" VerticalAlignment="Center" HorizontalAlignment="Center" Height="auto" Background="gray" Grid.Row="1">
+                <Label Content="Image Info" FontSize="15" FontWeight="DemiBold" Foreground="White" Background="#FF303030" Width="250" HorizontalContentAlignment="Center"/>
+                <StackPanel x:Name="ImageNum_Stack" Orientation="Horizontal">
+                    <Label Content="Number" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="ImageNum_TextBox" Width="50" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel x:Name="OriginalName_Stack" Orientation="Horizontal">
+                    <Label Content="Original Name" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="OriginalName_TextBox" Width="150" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel x:Name="NewName_Stack" Orientation="Horizontal">
+                    <Label Content="New Name" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="NewName_TextBox" Width="150" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel x:Name="Created_Stack" Orientation="Horizontal">
+                    <Label Content="Creation Time" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="Created_TextBox" Width="150" IsReadOnly="True"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel x:Name="CurrentInfo_Stack" VerticalAlignment="Center" HorizontalAlignment="Center" Height="auto" Background="gray" Grid.Row="2">
+                <Label Content="Current Values" FontSize="15" FontWeight="DemiBold" Foreground="White" Background="#FF303030" Width="250" HorizontalContentAlignment="Center"/>
+                <StackPanel x:Name="Source_Stack" Orientation="Horizontal">
+                    <Label Content="Source" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="Source_TextBox" Width="150" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel x:Name="Destination_Stack" Orientation="Horizontal">
+                    <Label Content="Destination" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="Destination_TextBox" Width="150" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel x:Name="ImageCount_Stack" Orientation="Horizontal">
+                    <Label Content="Image Count" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="ImageCount_TextBox" Width="50" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel x:Name="ProcessedCount_Stack" Orientation="Horizontal">
+                    <Label Content="Processed Count" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="ProcessedCount_TextBox" Width="50" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel x:Name="StartingNumber_Stack" Orientation="Horizontal">
+                    <Label Content="Starting Number" Width="100" HorizontalContentAlignment="Right"/>
+                    <TextBox x:Name="StartingNumber_TextBox" Width="50" IsReadOnly="True"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1" Background="#FF151538">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="15*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="3" Width="auto" Height="auto" Background="LightGray">
+                <UserControl Content="{Binding Path=CurrentTrayUC, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="auto" Width="auto"/>
+            </Border>
+            
+        </Grid>
+
+        <StatusBar Grid.Row="2" Grid.ColumnSpan="2" Margin="0,9,0,0" Background="LightGray">
+            <StatusBarItem HorizontalContentAlignment="Center">
                 <TextBlock Text="PK1"/>
             </StatusBarItem>
         </StatusBar>

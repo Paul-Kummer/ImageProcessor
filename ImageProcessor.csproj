@@ -30,6 +30,19 @@
     <None Remove="Images\Trash.png" />
     <None Remove="Images\Trash2.png" />
     <None Remove="Images\Undo.png" />
+    <None Remove="Resources\Back.ico" />
+    <None Remove="Resources\Camera.ico" />
+    <None Remove="Resources\Close.ico" />
+    <None Remove="Resources\Developer.ico" />
+    <None Remove="Resources\Edit.ico" />
+    <None Remove="Resources\File.ico" />
+    <None Remove="Resources\Forward.ico" />
+    <None Remove="Resources\Help.ico" />
+    <None Remove="Resources\Refresh.ico" />
+    <None Remove="Resources\Remove.ico" />
+    <None Remove="Resources\Save.ico" />
+    <None Remove="Resources\Settings.ico" />
+    <None Remove="Resources\Undo.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -87,6 +100,43 @@
     </Resource>
     <Resource Include="Images\Undo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Back.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Camera.ico" />
+    <Resource Include="Resources\Close.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Developer.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Edit.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\File.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Forward.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Help.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Refresh.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Remove.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Save.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Settings.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Undo.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
 

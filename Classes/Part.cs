@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace ImageProcessor.Classes
 {
-    class Part
+    public class Part
     {
         public Part()
         {
 
         }
 
-        DateTime _bornDate;
-        int _partNum;
-        int _trayNum;
-        int _trayXPos;
-        int _trayYPos;
-        Image[] _images;
-        bool _isReject;
-        bool _taskComplete;
-        String inspectedBy;
+        private DateTime _bornDate;
+        private int _partNum;
+        private int _trayNum;
+        private int _trayXPos;
+        private int _trayYPos;
+        private Image[] _images;
+        private bool _isReject;
+        private bool _taskComplete;
+        private String inspectedBy;
     }
 }
