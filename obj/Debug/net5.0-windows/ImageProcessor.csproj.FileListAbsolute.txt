@@ -5,7 +5,6 @@ C:\Users\pakum\source\repos\ImageProcessor\bin\Debug\net5.0-windows\ImageProcess
 C:\Users\pakum\source\repos\ImageProcessor\bin\Debug\net5.0-windows\ImageProcessor.dll
 C:\Users\pakum\source\repos\ImageProcessor\bin\Debug\net5.0-windows\ref\ImageProcessor.dll
 C:\Users\pakum\source\repos\ImageProcessor\bin\Debug\net5.0-windows\ImageProcessor.pdb
-C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\ImageProcessor.csproj.AssemblyReference.cache
 C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\MainWindow.g.cs
 C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\App.g.cs
 C:\Users\pakum\source\repos\ImageProcessor\obj\Debug\net5.0-windows\ImageProcessor_MarkupCompile.cache

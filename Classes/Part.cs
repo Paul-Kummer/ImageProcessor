@@ -20,6 +20,7 @@ namespace ImageProcessor.Classes
         private int _trayYPos;
         private Image[] _images;
         private bool _isReject;
+        private bool _isSelected;
         private bool _taskComplete;
         private String inspectedBy;
     }

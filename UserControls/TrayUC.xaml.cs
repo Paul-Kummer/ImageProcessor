@@ -65,22 +65,29 @@ namespace ImageProcessor.UserControls
         {
             CavityStack = new StackPanel();
             CavityStack.Orientation = Orientation.Vertical;
+            CavityStack.Margin = new Thickness(0, 0, 0, 0);
 
             Part curPart;
             CavityUC curCavity;
             StackPanel curRow;
 
-            for(int rowIndex = 0; rowIndex < CurrentTray.Parts.GetLength(0); rowIndex++)
+            for(int columnIndex = 0; columnIndex < CurrentTray.CavitiesHigh; columnIndex++)
             {
                 curRow = new StackPanel();
+
+                // These must be set to stretch if the cavities are to fill up the whole tray
+                curRow.HorizontalAlignment = HorizontalAlignment.Stretch;
+                curRow.VerticalAlignment = VerticalAlignment.Stretch;
+                curRow.Orientation = Orientation.Horizontal;
+                curRow.Margin = new Thickness(0, 0, 0, 0);
                 
-                for(int columnIndex = 0; columnIndex < CurrentTray.Parts.GetLength(1); columnIndex++)
+                for(int rowIndex = 0; rowIndex < CurrentTray.CavitiesWide; rowIndex++)
                 {
                     curCavity = new CavityUC();
                     curPart = CurrentTray.Parts[rowIndex, columnIndex];
                     curRow.Children.Add(curCavity);
                 }
-
+                
                 CavityStack.Children.Add(curRow);
             }
 
